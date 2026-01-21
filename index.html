@@ -37,7 +37,12 @@
         overflow-x: hidden;
       }
 
-      h1, h2, h3, h4, h5, h6 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
         font-family: 'Space Grotesk', sans-serif;
       }
 
@@ -60,60 +65,63 @@
 
       .particle {
         position: absolute;
-        background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(59, 130, 246, 0.15));
+        background: linear-gradient(
+          135deg,
+          rgba(37, 99, 235, 0.1),
+          rgba(59, 130, 246, 0.15)
+        );
         border-radius: 50%;
         animation: float 20s infinite ease-in-out;
       }
 
-      .particle:nth-child(1) { width: 80px; height: 80px; left: 10%; top: 20%; animation-delay: 0s; }
-      .particle:nth-child(2) { width: 60px; height: 60px; left: 80%; top: 10%; animation-delay: -5s; }
-      .particle:nth-child(3) { width: 100px; height: 100px; left: 70%; top: 60%; animation-delay: -10s; }
-      .particle:nth-child(4) { width: 40px; height: 40px; left: 20%; top: 70%; animation-delay: -15s; }
-      .particle:nth-child(5) { width: 70px; height: 70px; left: 50%; top: 40%; animation-delay: -7s; }
+      .particle:nth-child(1) {
+        width: 80px;
+        height: 80px;
+        left: 10%;
+        top: 20%;
+        animation-delay: 0s;
+      }
+      .particle:nth-child(2) {
+        width: 60px;
+        height: 60px;
+        left: 80%;
+        top: 10%;
+        animation-delay: -5s;
+      }
+      .particle:nth-child(3) {
+        width: 100px;
+        height: 100px;
+        left: 70%;
+        top: 60%;
+        animation-delay: -10s;
+      }
+      .particle:nth-child(4) {
+        width: 40px;
+        height: 40px;
+        left: 20%;
+        top: 70%;
+        animation-delay: -15s;
+      }
+      .particle:nth-child(5) {
+        width: 70px;
+        height: 70px;
+        left: 50%;
+        top: 40%;
+        animation-delay: -7s;
+      }
 
       @keyframes float {
-        0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.3; }
-        50% { transform: translateY(-30px) rotate(180deg); opacity: 0.6; }
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 0.3;
+        }
+        50% {
+          transform: translateY(-30px) rotate(180deg);
+          opacity: 0.6;
+        }
       }
 
-      /* Squirrel animations */
-      .squirrel {
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        z-index: 100;
-        pointer-events: none;
-        transition: transform 0.1s ease-out;
-      }
-
-      .squirrel-svg {
-        width: 50px;
-        height: 50px;
-        filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.2));
-      }
-
-      .running-squirrel {
-        position: absolute;
-        animation: runAcross 8s linear infinite;
-        font-size: 24px;
-      }
-
-      @keyframes runAcross {
-        0% { left: -60px; }
-        100% { left: calc(100% + 60px); }
-      }
-
-      .swing-squirrel {
-        position: absolute;
-        animation: swing 2s ease-in-out infinite;
-        transform-origin: top center;
-        font-size: 20px;
-      }
-
-      @keyframes swing {
-        0%, 100% { transform: rotate(-15deg); }
-        50% { transform: rotate(15deg); }
-      }
 
       /* Header transition */
       nav {
@@ -134,8 +142,9 @@
       .scroll-reveal {
         opacity: 0;
         transform: translateY(40px);
-        transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transition:
+          opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
       }
 
       .scroll-reveal.revealed {
@@ -157,8 +166,15 @@
         position: relative;
         width: 120px;
         height: 138px;
-        background: linear-gradient(135deg, #2563EB, #3B82F6);
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
         display: flex;
         align-items: center;
         justify-content: center;
@@ -174,7 +190,14 @@
         width: calc(100% - 4px);
         height: calc(100% - 4px);
         background: white;
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        clip-path: polygon(
+          50% 0%,
+          100% 25%,
+          100% 75%,
+          50% 100%,
+          0% 75%,
+          0% 25%
+        );
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -196,7 +219,7 @@
         top: 0;
         bottom: 0;
         width: 4px;
-        background: linear-gradient(to bottom, #2563EB, #3B82F6, #60A5FA);
+        background: linear-gradient(to bottom, #2563eb, #3b82f6, #60a5fa);
         transform: translateX(-50%);
         border-radius: 2px;
       }
@@ -224,7 +247,7 @@
         position: absolute;
         width: 24px;
         height: 24px;
-        background: linear-gradient(135deg, #2563EB, #3B82F6);
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
         border: 4px solid white;
         border-radius: 50%;
         top: 30px;
@@ -250,19 +273,21 @@
         background: white;
         padding: 24px;
         border-radius: 16px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        border: 1px solid #E4E4E7;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e4e4e7;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
 
       .timeline-item:hover .timeline-content {
         transform: translateY(-5px);
-        box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
       }
 
       .timeline-year {
         display: inline-block;
-        background: linear-gradient(135deg, #2563EB, #3B82F6);
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
         color: white;
         padding: 6px 16px;
         border-radius: 20px;
@@ -334,8 +359,13 @@
 
       /* Gradient animation */
       @keyframes gradientShift {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
       }
 
       .gradient-animate {
@@ -343,18 +373,76 @@
         animation: gradientShift 3s ease infinite;
       }
 
-      /* Glitch effect */
-      @keyframes glitch {
-        0% { transform: translate(0); }
-        20% { transform: translate(-2px, 2px); }
-        40% { transform: translate(-2px, -2px); }
-        60% { transform: translate(2px, 2px); }
-        80% { transform: translate(2px, -2px); }
-        100% { transform: translate(0); }
+      /* Gentle bounce effect - replaced glitch */
+      @keyframes gentleBounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
       }
 
-      .glitch:hover {
-        animation: glitch 0.3s ease;
+      .project-card:hover {
+        animation: gentleBounce 0.4s ease;
+      }
+
+      /* Flying cat animation */
+      .flying-cat {
+        position: fixed;
+        width: 80px;
+        height: 80px;
+        pointer-events: none;
+        z-index: 5;
+        animation: flyCat 12s linear infinite;
+      }
+
+      @keyframes flyCat {
+        0% {
+          left: -100px;
+          top: 20%;
+        }
+        100% {
+          left: 110%;
+          top: 20%;
+        }
+      }
+
+      /* Jumping dog animation */
+      .jumping-dog {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        animation: jumpDog 2s ease-in-out infinite;
+      }
+
+      @keyframes jumpDog {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Eating ramen animation */
+      .eating-ramen {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        animation: eatRamen 1.5s ease-in-out infinite;
+      }
+
+      @keyframes eatRamen {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
       }
 
       /* Pulse ring animation */
@@ -394,20 +482,38 @@
 
       /* Bounce scale animation */
       @keyframes bounceScale {
-        0%, 100% { transform: scale(1); }
-        25% { transform: scale(0.95); }
-        50% { transform: scale(1.05); }
-        75% { transform: scale(0.98); }
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        25% {
+          transform: scale(0.95);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        75% {
+          transform: scale(0.98);
+        }
       }
 
       /* Shimmer effect */
       @keyframes shimmer {
-        0% { background-position: -1000px 0; }
-        100% { background-position: 1000px 0; }
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
       }
 
       .shimmer {
-        background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%);
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.3) 50%,
+          transparent 100%
+        );
         background-size: 1000px 100%;
         animation: shimmer 2s infinite;
       }
@@ -432,9 +538,22 @@
     <div id="projectSheet" class="sheet">
       <div class="p-8">
         <!-- Close button -->
-        <button onclick="closeSheet()" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        <button
+          onclick="closeSheet()"
+          class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
@@ -442,6 +561,9 @@
         <div id="sheetContent"></div>
       </div>
     </div>
+
+    <!-- Flying Cat -->
+    <img src="machiko-rabbit.gif" alt="Flying Cat" class="flying-cat" />
 
     <!-- Animated Background Particles -->
     <div class="bg-particles">
@@ -452,69 +574,72 @@
       <div class="particle"></div>
     </div>
 
-    <!-- Squirrel Character (follows cursor) -->
-    <div id="squirrel" class="squirrel" style="display: none;">
-      <svg class="squirrel-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Tail -->
-        <ellipse cx="25" cy="45" rx="18" ry="35" fill="#D97706" transform="rotate(-30 25 45)"/>
-        <ellipse cx="20" cy="40" rx="12" ry="25" fill="#F59E0B" transform="rotate(-30 20 40)"/>
-        <!-- Body -->
-        <ellipse cx="55" cy="60" rx="22" ry="28" fill="#D97706"/>
-        <ellipse cx="55" cy="58" rx="18" ry="22" fill="#FBBF24"/>
-        <!-- Head -->
-        <circle cx="70" cy="35" r="20" fill="#D97706"/>
-        <circle cx="72" cy="33" r="16" fill="#F59E0B"/>
-        <!-- Ears -->
-        <ellipse cx="58" cy="20" rx="6" ry="10" fill="#D97706"/>
-        <ellipse cx="82" cy="22" rx="6" ry="10" fill="#D97706"/>
-        <!-- Eyes -->
-        <circle cx="65" cy="32" r="5" fill="white"/>
-        <circle cx="79" cy="32" r="5" fill="white"/>
-        <circle cx="66" cy="33" r="3" fill="#18181B"/>
-        <circle cx="80" cy="33" r="3" fill="#18181B"/>
-        <circle cx="67" cy="32" r="1" fill="white"/>
-        <circle cx="81" cy="32" r="1" fill="white"/>
-        <!-- Nose -->
-        <ellipse cx="72" cy="42" rx="4" ry="3" fill="#7C2D12"/>
-        <!-- Cheeks -->
-        <circle cx="60" cy="40" r="4" fill="#FCD34D" opacity="0.6"/>
-        <circle cx="84" cy="40" r="4" fill="#FCD34D" opacity="0.6"/>
-        <!-- Paws -->
-        <ellipse cx="40" cy="82" rx="8" ry="6" fill="#D97706"/>
-        <ellipse cx="70" cy="85" rx="8" ry="6" fill="#D97706"/>
-        <!-- Acorn in paws -->
-        <ellipse cx="55" cy="78" rx="6" ry="8" fill="#92400E"/>
-        <rect x="52" y="68" width="6" height="4" rx="2" fill="#78350F"/>
-      </svg>
-    </div>
 
     <!-- Floating Navigation -->
-    <nav id="navbar" class="fixed top-4 left-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-border rounded-2xl shadow-sm">
+    <nav
+      id="navbar"
+      class="fixed top-4 left-4 right-4 z-50 bg-white/90 backdrop-blur-sm border border-border rounded-2xl shadow-sm"
+    >
       <div class="max-w-7xl mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="font-heading font-bold text-xl text-primary relative">
-            ADH
+            Đức HA
             <span class="absolute -top-2 -right-6 text-lg">🌰</span>
           </div>
 
           <ul class="hidden md:flex items-center gap-8">
-            <li><a href="#about" class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200">About</a></li>
-            <li><a href="#projects" class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200">Projects</a></li>
-            <li><a href="#skills" class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200">Skills</a></li>
-            <li><a href="#experience" class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200">Experience</a></li>
             <li>
-              <a href="#contact" class="bg-accent text-white px-6 py-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors duration-200 relative overflow-hidden group">
+              <a
+                href="#about"
+                class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="text-secondary hover:text-primary cursor-pointer transition-colors duration-200"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-accent text-white px-6 py-2 rounded-lg hover:bg-blue-700 cursor-pointer transition-colors duration-200 relative overflow-hidden group"
+              >
                 Contact
-                <!-- Swing squirrel on button -->
-                <span class="swing-squirrel absolute -top-1 -right-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">🐿️</span>
               </a>
             </li>
           </ul>
 
           <!-- Mobile Menu Icon -->
           <button class="md:hidden cursor-pointer" aria-label="Menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
             </svg>
           </button>
         </div>
@@ -522,65 +647,130 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center pt-24 px-4 relative">
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center pt-24 px-4 relative"
+    >
       <div class="max-w-6xl mx-auto text-center relative z-10">
         <div class="mb-6 scroll-reveal">
-          <div class="w-32 h-32 bg-gradient-to-br from-accent to-blue-600 rounded-full mx-auto mb-8 relative overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center text-4xl">
-              <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          <div
+            class="w-32 h-32 bg-gradient-to-br from-accent to-blue-600 rounded-full mx-auto mb-8 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center text-4xl"
+            >
+              <svg
+                class="w-16 h-16 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
               </svg>
             </div>
           </div>
         </div>
 
         <div class="relative inline-block">
-          <h1 class="font-heading font-bold text-5xl md:text-7xl text-primary mb-6 scroll-reveal" style="transition-delay: 0.1s;">
-            Hi, I'm <span class="text-accent relative">
-              Anh Duc Hoang
-              <!-- Running squirrel on text -->
-              <span class="running-squirrel absolute -top-8" style="animation-delay: -2s;">🐿️</span>
-            </span>
+          <h1
+            class="font-heading font-bold text-5xl md:text-7xl text-primary mb-6 scroll-reveal"
+            style="transition-delay: 0.1s"
+          >
+            Hi, I'm
+            <span class="text-accent"> Anh Duc Hoang </span>
           </h1>
         </div>
 
-        <p class="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto font-light scroll-reveal" style="transition-delay: 0.2s;">
-          Full-Stack Developer & UI/UX Enthusiast building beautiful, functional digital experiences
+        <p
+          class="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto font-light scroll-reveal"
+          style="transition-delay: 0.2s"
+        >
+          Full-Stack Developer & UI/UX Enthusiast building beautiful, functional
+          digital experiences
         </p>
 
-        <div class="flex gap-4 justify-center scroll-reveal" style="transition-delay: 0.3s;">
-          <a href="#projects" class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 cursor-pointer transition-all duration-200 relative group magnetic-btn">
+        <div
+          class="flex gap-4 justify-center scroll-reveal"
+          style="transition-delay: 0.3s"
+        >
+          <a
+            href="#projects"
+            class="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 cursor-pointer transition-all duration-200 relative group magnetic-btn"
+          >
             View Projects
-            <span class="swing-squirrel absolute -bottom-6 left-1/2 -translate-x-1/2 text-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">🐿️</span>
           </a>
-          <button class="border border-border text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-50 cursor-pointer transition-all duration-200 magnetic-btn">
+          <button
+            class="border border-border text-primary px-8 py-3 rounded-lg font-medium hover:bg-gray-50 cursor-pointer transition-all duration-200 magnetic-btn"
+          >
             Download CV
           </button>
         </div>
 
         <!-- Social Links -->
-        <div class="flex gap-6 justify-center mt-12 scroll-reveal" style="transition-delay: 0.4s;">
-          <a href="#" class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+        <div
+          class="flex gap-6 justify-center mt-12 scroll-reveal"
+          style="transition-delay: 0.4s"
+        >
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+            title="GitHub"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
             </svg>
           </a>
-          <a href="#" class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+          <a
+            href="https://linkedin.com/in/yourprofile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+            title="LinkedIn"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
             </svg>
           </a>
-          <a href="#" class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+          <a
+            href="https://facebook.com/yourprofile"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-secondary hover:text-accent cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+            title="Facebook"
+          >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
             </svg>
           </a>
         </div>
 
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          <svg
+            class="w-6 h-6 text-secondary"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            ></path>
           </svg>
         </div>
       </div>
@@ -589,16 +779,27 @@
     <!-- About Section -->
     <section id="about" class="py-24 px-4 bg-white relative z-10">
       <div class="max-w-6xl mx-auto">
-        <h2 class="font-heading font-semibold text-4xl text-primary mb-12 text-center scroll-reveal">
+        <h2
+          class="font-heading font-semibold text-4xl text-primary mb-12 text-center scroll-reveal"
+        >
           About Me
         </h2>
 
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="scroll-reveal">
-            <div class="aspect-square bg-gradient-to-br from-accent/20 to-blue-600/20 rounded-2xl relative overflow-hidden">
+            <div
+              class="aspect-square bg-gradient-to-br from-accent/20 to-blue-600/20 rounded-2xl relative overflow-hidden"
+            >
               <!-- Decorative squirrel -->
-              <div class="absolute bottom-4 right-4 text-4xl animate-bounce">🐿️</div>
-              <div class="absolute top-4 left-4 text-2xl" style="animation: acornBounce 2s ease-in-out infinite;">🌰</div>
+              <div class="absolute bottom-4 right-4 text-4xl animate-bounce">
+                🐿️
+              </div>
+              <div
+                class="absolute top-4 left-4 text-2xl"
+                style="animation: acornBounce 2s ease-in-out infinite"
+              >
+                🌰
+              </div>
             </div>
           </div>
 
@@ -617,20 +818,36 @@
             </p>
 
             <div class="grid grid-cols-2 gap-4 pt-6">
-              <div class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div class="text-3xl font-heading font-bold text-accent mb-2">50+</div>
+              <div
+                class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              >
+                <div class="text-3xl font-heading font-bold text-accent mb-2">
+                  50+
+                </div>
                 <div class="text-sm text-secondary">Projects Completed</div>
               </div>
-              <div class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div class="text-3xl font-heading font-bold text-accent mb-2">5+</div>
+              <div
+                class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              >
+                <div class="text-3xl font-heading font-bold text-accent mb-2">
+                  5+
+                </div>
                 <div class="text-sm text-secondary">Years Experience</div>
               </div>
-              <div class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div class="text-3xl font-heading font-bold text-accent mb-2">30+</div>
+              <div
+                class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              >
+                <div class="text-3xl font-heading font-bold text-accent mb-2">
+                  30+
+                </div>
                 <div class="text-sm text-secondary">Happy Clients</div>
               </div>
-              <div class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-                <div class="text-3xl font-heading font-bold text-accent mb-2">100%</div>
+              <div
+                class="border border-border rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 cursor-pointer"
+              >
+                <div class="text-3xl font-heading font-bold text-accent mb-2">
+                  100%
+                </div>
                 <div class="text-sm text-secondary">Satisfaction</div>
               </div>
             </div>
@@ -642,113 +859,263 @@
     <!-- Projects Section -->
     <section id="projects" class="py-24 px-4 relative z-10">
       <div class="max-w-6xl mx-auto">
-        <h2 class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal">
+        <h2
+          class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal"
+        >
           Featured Projects
         </h2>
-        <p class="text-center text-secondary mb-12 max-w-2xl mx-auto scroll-reveal" style="transition-delay: 0.1s;">
-          A selection of recent work showcasing my skills in development and design
+        <p
+          class="text-center text-secondary mb-12 max-w-2xl mx-auto scroll-reveal"
+          style="transition-delay: 0.1s"
+        >
+          A selection of recent work showcasing my skills in development and
+          design
         </p>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!-- Project Cards -->
-          <div onclick="openSheet('ecommerce')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.1s;">
-            <div class="bg-gradient-to-br from-blue-500 to-purple-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('ecommerce')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.1s"
+          >
+            <div
+              class="bg-gradient-to-br from-blue-500 to-purple-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">E-Commerce Platform</h3>
-              <p class="text-secondary mb-4">A modern online store with seamless checkout experience</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                E-Commerce Platform
+              </h3>
+              <p class="text-secondary mb-4">
+                A modern online store with seamless checkout experience
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">React</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Node.js</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">MongoDB</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >React</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Node.js</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >MongoDB</span
+                >
               </div>
             </div>
           </div>
 
-          <div onclick="openSheet('taskmanager')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.2s;">
-            <div class="bg-gradient-to-br from-green-500 to-teal-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('taskmanager')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.2s"
+          >
+            <div
+              class="bg-gradient-to-br from-green-500 to-teal-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">Task Management App</h3>
-              <p class="text-secondary mb-4">Collaborative workspace for team productivity</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                Task Management App
+              </h3>
+              <p class="text-secondary mb-4">
+                Collaborative workspace for team productivity
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Vue.js</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Firebase</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Tailwind</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Vue.js</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Firebase</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Tailwind</span
+                >
               </div>
             </div>
           </div>
 
-          <div onclick="openSheet('analytics')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.3s;">
-            <div class="bg-gradient-to-br from-orange-500 to-red-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('analytics')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.3s"
+          >
+            <div
+              class="bg-gradient-to-br from-orange-500 to-red-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">Analytics Dashboard</h3>
-              <p class="text-secondary mb-4">Real-time data visualization and insights</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                Analytics Dashboard
+              </h3>
+              <p class="text-secondary mb-4">
+                Real-time data visualization and insights
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Next.js</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">D3.js</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">PostgreSQL</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Next.js</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >D3.js</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >PostgreSQL</span
+                >
               </div>
             </div>
           </div>
 
-          <div onclick="openSheet('social')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.4s;">
-            <div class="bg-gradient-to-br from-pink-500 to-rose-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('social')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.4s"
+          >
+            <div
+              class="bg-gradient-to-br from-pink-500 to-rose-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">Social Media Platform</h3>
-              <p class="text-secondary mb-4">Connect and share with your community</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                Social Media Platform
+              </h3>
+              <p class="text-secondary mb-4">
+                Connect and share with your community
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">React</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">GraphQL</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">AWS</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >React</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >GraphQL</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >AWS</span
+                >
               </div>
             </div>
           </div>
 
-          <div onclick="openSheet('fitness')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.5s;">
-            <div class="bg-gradient-to-br from-indigo-500 to-blue-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('fitness')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.5s"
+          >
+            <div
+              class="bg-gradient-to-br from-indigo-500 to-blue-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">Fitness Tracker</h3>
-              <p class="text-secondary mb-4">Track workouts and achieve your fitness goals</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                Fitness Tracker
+              </h3>
+              <p class="text-secondary mb-4">
+                Track workouts and achieve your fitness goals
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">React Native</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Redux</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">SQLite</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >React Native</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Redux</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >SQLite</span
+                >
               </div>
             </div>
           </div>
 
-          <div onclick="openSheet('recipe')" class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal glitch" style="transition-delay: 0.6s;">
-            <div class="bg-gradient-to-br from-yellow-500 to-amber-600 aspect-video relative group gradient-animate">
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
-                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium">View Details</span>
+          <div
+            onclick="openSheet('recipe')"
+            class="border border-border rounded-xl overflow-hidden bg-white hover:shadow-xl cursor-pointer transition-all duration-300 hover:-translate-y-2 scroll-reveal project-card"
+            style="transition-delay: 0.6s"
+          >
+            <div
+              class="bg-gradient-to-br from-yellow-500 to-amber-600 aspect-video relative group gradient-animate"
+            >
+              <div
+                class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center"
+              >
+                <span
+                  class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white font-medium"
+                  >View Details</span
+                >
               </div>
             </div>
             <div class="p-6">
-              <h3 class="font-heading font-semibold text-xl mb-2">Recipe Finder</h3>
-              <p class="text-secondary mb-4">Discover and save your favorite recipes</p>
+              <h3 class="font-heading font-semibold text-xl mb-2">
+                Recipe Finder
+              </h3>
+              <p class="text-secondary mb-4">
+                Discover and save your favorite recipes
+              </p>
               <div class="flex flex-wrap gap-2">
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">Svelte</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">API</span>
-                <span class="text-xs px-3 py-1 bg-bg border border-border rounded-full">CSS</span>
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >Svelte</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >API</span
+                >
+                <span
+                  class="text-xs px-3 py-1 bg-bg border border-border rounded-full"
+                  >CSS</span
+                >
               </div>
             </div>
           </div>
@@ -759,19 +1126,33 @@
     <!-- Skills Section - Hexagon Design -->
     <section id="skills" class="py-24 px-4 bg-white relative z-10">
       <div class="max-w-6xl mx-auto">
-        <h2 class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal">
+        <h2
+          class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal"
+        >
           Skills & Technologies
         </h2>
-        <p class="text-center text-secondary mb-16 max-w-2xl mx-auto scroll-reveal" style="transition-delay: 0.1s;">
+        <p
+          class="text-center text-secondary mb-16 max-w-2xl mx-auto scroll-reveal"
+          style="transition-delay: 0.1s"
+        >
           Technologies I work with to bring ideas to life
         </p>
 
-        <div class="skills-hexagon-grid scroll-reveal" style="transition-delay: 0.2s;">
+        <div
+          class="skills-hexagon-grid scroll-reveal"
+          style="transition-delay: 0.2s"
+        >
           <!-- Skill Hexagons -->
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">React</span>
             </div>
@@ -779,8 +1160,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Next.js</span>
             </div>
@@ -788,8 +1175,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78zM12 14.08L5.16 2.23h4.43L12 6.41l2.41-4.18h4.43z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 1.61h-9.94L12 5.16 9.94 1.61H0l12 20.78zM12 14.08L5.16 2.23h4.43L12 6.41l2.41-4.18h4.43z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Vue.js</span>
             </div>
@@ -797,8 +1190,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">TypeScript</span>
             </div>
@@ -806,8 +1205,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.998 0c-.545 0-1.09.182-1.09.182l-8.97 4.635c-.563.29-.924.828-.998 1.43l-.01.09v11.326c0 .637.348 1.224.918 1.534l8.97 4.635c.294.152.644.182.908.182.545 0 1.09-.182 1.09-.182l8.97-4.635c.563-.29.924-.828.998-1.43l.01-.09V6.337c0-.637-.348-1.224-.918-1.534L12.906.168S12.543 0 11.998 0z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M11.998 0c-.545 0-1.09.182-1.09.182l-8.97 4.635c-.563.29-.924.828-.998 1.43l-.01.09v11.326c0 .637.348 1.224.918 1.534l8.97 4.635c.294.152.644.182.908.182.545 0 1.09-.182 1.09-.182l8.97-4.635c.563-.29.924-.828.998-1.43l.01-.09V6.337c0-.637-.348-1.224-.918-1.534L12.906.168S12.543 0 11.998 0z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Node.js</span>
             </div>
@@ -815,8 +1220,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Python</span>
             </div>
@@ -824,8 +1235,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Tailwind</span>
             </div>
@@ -833,8 +1250,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H.526V9.948l3.58-5.843z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4.105 4.105S9.158 1.58 11.684.316a3.079 3.079 0 0 1 1.481-.315c.766.047 1.677.788 1.677.788L24 9.948v9.789h-4.263V24H.526V9.948l3.58-5.843z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">PostgreSQL</span>
             </div>
@@ -842,8 +1265,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm.76 2.75l.723.349.722-.347.18-.78-.5-.623h-.804l-.5.623.179.778zm1.5-3.095a.44.44 0 0 0 .7.336l.008.003 2.134-1.513a5.188 5.188 0 0 0-2.992-1.442l.148 2.615.002.001zm10.876 5.97l-5.773 7.181a1.6 1.6 0 0 1-1.248.594l-9.261.003a1.6 1.6 0 0 1-1.247-.596l-5.776-7.18a1.583 1.583 0 0 1-.307-1.34L2.1 5.573c.108-.47.425-.864.863-1.073L11.305.513a1.606 1.606 0 0 1 1.385 0l8.345 3.985c.438.209.755.604.863 1.073l2.062 8.955c.108.47-.005.963-.308 1.34z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm.76 2.75l.723.349.722-.347.18-.78-.5-.623h-.804l-.5.623.179.778zm1.5-3.095a.44.44 0 0 0 .7.336l.008.003 2.134-1.513a5.188 5.188 0 0 0-2.992-1.442l.148 2.615.002.001zm10.876 5.97l-5.773 7.181a1.6 1.6 0 0 1-1.248.594l-9.261.003a1.6 1.6 0 0 1-1.247-.596l-5.776-7.18a1.583 1.583 0 0 1-.307-1.34L2.1 5.573c.108-.47.425-.864.863-1.073L11.305.513a1.606 1.606 0 0 1 1.385 0l8.345 3.985c.438.209.755.604.863 1.073l2.062 8.955c.108.47-.005.963-.308 1.34z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Docker</span>
             </div>
@@ -851,8 +1280,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0L1.608 6v12L12 24l10.392-6V6zm0 2.154l8.03 4.638v9.231L12 21.846l-8.03-4.823V6.792z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0L1.608 6v12L12 24l10.392-6V6zm0 2.154l8.03 4.638v9.231L12 21.846l-8.03-4.823V6.792z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">AWS</span>
             </div>
@@ -860,8 +1295,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">Git</span>
             </div>
@@ -869,8 +1310,14 @@
 
           <div class="skill-hex">
             <div class="skill-hex-inner">
-              <svg class="w-8 h-8 text-accent mb-2" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M0 12C0 5.373 5.373 0 12 0c4.873 0 9.067 2.904 10.947 7.077l-15.87 15.87a11.981 11.981 0 0 1-1.935-1.099L14.99 12H12l-8.485 8.485A11.962 11.962 0 0 1 0 12zm12.004 12L24 12.004C23.998 18.628 18.628 23.998 12.004 24z"/>
+              <svg
+                class="w-8 h-8 text-accent mb-2"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M0 12C0 5.373 5.373 0 12 0c4.873 0 9.067 2.904 10.947 7.077l-15.87 15.87a11.981 11.981 0 0 1-1.935-1.099L14.99 12H12l-8.485 8.485A11.962 11.962 0 0 1 0 12zm12.004 12L24 12.004C23.998 18.628 18.628 23.998 12.004 24z"
+                />
               </svg>
               <span class="text-xs font-semibold text-primary">GraphQL</span>
             </div>
@@ -882,10 +1329,15 @@
     <!-- Experience Section - Enhanced Timeline -->
     <section id="experience" class="py-24 px-4 relative z-10">
       <div class="max-w-6xl mx-auto">
-        <h2 class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal">
+        <h2
+          class="font-heading font-semibold text-4xl text-primary mb-4 text-center scroll-reveal"
+        >
           Experience
         </h2>
-        <p class="text-center text-secondary mb-16 max-w-2xl mx-auto scroll-reveal" style="transition-delay: 0.1s;">
+        <p
+          class="text-center text-secondary mb-16 max-w-2xl mx-auto scroll-reveal"
+          style="transition-delay: 0.1s"
+        >
           My professional journey in the tech industry
         </p>
 
@@ -893,58 +1345,96 @@
           <div class="timeline-line"></div>
 
           <!-- Experience Item 1 -->
-          <div class="timeline-item scroll-reveal" style="transition-delay: 0.2s;">
+          <div
+            class="timeline-item scroll-reveal"
+            style="transition-delay: 0.2s"
+          >
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-year">2023 - Present</span>
-              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">Senior Full-Stack Developer</h3>
-              <div class="text-accent font-medium mb-3">Tech Solutions Inc.</div>
+              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">
+                Senior Full-Stack Developer
+              </h3>
+              <div class="text-accent font-medium mb-3">
+                Tech Solutions Inc.
+              </div>
               <p class="text-secondary text-sm leading-relaxed">
-                Led development of enterprise web applications serving 100K+ users.
-                Architected scalable solutions using modern frameworks and cloud infrastructure.
+                Led development of enterprise web applications serving 100K+
+                users. Architected scalable solutions using modern frameworks
+                and cloud infrastructure.
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">React</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">Node.js</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">AWS</span>
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >React</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >Node.js</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >AWS</span
+                >
               </div>
             </div>
           </div>
 
           <!-- Experience Item 2 -->
-          <div class="timeline-item scroll-reveal" style="transition-delay: 0.3s;">
+          <div
+            class="timeline-item scroll-reveal"
+            style="transition-delay: 0.3s"
+          >
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-year">2021 - 2023</span>
-              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">Frontend Developer</h3>
+              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">
+                Frontend Developer
+              </h3>
               <div class="text-accent font-medium mb-3">Digital Agency Co.</div>
               <p class="text-secondary text-sm leading-relaxed">
-                Built responsive web applications and interactive user interfaces.
-                Collaborated with designers and backend teams to deliver pixel-perfect implementations.
+                Built responsive web applications and interactive user
+                interfaces. Collaborated with designers and backend teams to
+                deliver pixel-perfect implementations.
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">Vue.js</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">SCSS</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">JavaScript</span>
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >Vue.js</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >SCSS</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >JavaScript</span
+                >
               </div>
             </div>
           </div>
 
           <!-- Experience Item 3 -->
-          <div class="timeline-item scroll-reveal" style="transition-delay: 0.4s;">
+          <div
+            class="timeline-item scroll-reveal"
+            style="transition-delay: 0.4s"
+          >
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-year">2019 - 2021</span>
-              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">Junior Web Developer</h3>
+              <h3 class="font-heading font-semibold text-xl mb-2 text-primary">
+                Junior Web Developer
+              </h3>
               <div class="text-accent font-medium mb-3">StartUp Labs</div>
               <p class="text-secondary text-sm leading-relaxed">
                 Developed and maintained company websites and web applications.
-                Learned best practices in code quality, testing, and agile development.
+                Learned best practices in code quality, testing, and agile
+                development.
               </p>
               <div class="flex flex-wrap gap-2 mt-4">
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">HTML/CSS</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">jQuery</span>
-                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded">PHP</span>
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >HTML/CSS</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >jQuery</span
+                >
+                <span class="text-xs px-2 py-1 bg-accent/10 text-accent rounded"
+                  >PHP</span
+                >
               </div>
             </div>
           </div>
@@ -953,46 +1443,123 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-4 bg-white relative z-10">
+    <section
+      id="contact"
+      class="py-24 px-4 bg-white relative z-10 overflow-hidden"
+    >
       <div class="max-w-7xl mx-auto">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="font-heading text-4xl md:text-5xl font-bold text-primary mb-6 scroll-reveal">
+        <div class="max-w-3xl mx-auto text-center relative">
+          <h2
+            class="font-heading text-4xl md:text-5xl font-bold text-primary mb-6 scroll-reveal"
+          >
             Get In Touch
           </h2>
-          <p class="text-xl text-secondary mb-12 scroll-reveal" style="transition-delay: 0.1s;">
+          <p
+            class="text-xl text-secondary mb-12 scroll-reveal"
+            style="transition-delay: 0.1s"
+          >
             Feel free to reach out for collaborations or just a friendly hello
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 scroll-reveal" style="transition-delay: 0.2s;">
-            <div class="p-6 border border-border rounded-2xl hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 scroll-reveal"
+            style="transition-delay: 0.2s"
+          >
+            <div
+              class="p-6 border border-border rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative group"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 gradient-animate rounded-2xl flex items-center justify-center mx-auto mb-4 relative"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
                 </svg>
+                <div class="absolute inset-0 rounded-2xl shimmer"></div>
               </div>
-              <h3 class="font-heading font-semibold text-primary mb-2">Email</h3>
-              <p class="text-secondary">contact@example.com</p>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">
+                Email
+              </h3>
+              <p class="text-secondary text-sm">contact@example.com</p>
             </div>
 
-            <div class="p-6 border border-border rounded-2xl hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            <div
+              class="p-6 border border-border rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative group"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 gradient-animate rounded-2xl flex items-center justify-center mx-auto mb-4 relative"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
                 </svg>
+                <div class="absolute inset-0 rounded-2xl shimmer"></div>
               </div>
-              <h3 class="font-heading font-semibold text-primary mb-2">LinkedIn</h3>
-              <p class="text-secondary">linkedin.com/in/yourprofile</p>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">
+                LinkedIn
+              </h3>
+              <p class="text-secondary text-sm">linkedin.com/in/yourprofile</p>
             </div>
 
-            <div class="p-6 border border-border rounded-2xl hover:shadow-lg transition-shadow duration-300 cursor-pointer">
-              <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
-                  <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+            <div
+              class="p-6 border border-border rounded-2xl hover:shadow-xl hover:-translate-y-2 transition-all duration-300 cursor-pointer relative group"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-600 gradient-animate rounded-2xl flex items-center justify-center mx-auto mb-4 relative"
+              >
+                <svg
+                  class="w-8 h-8 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  />
                 </svg>
+                <div class="absolute inset-0 rounded-2xl shimmer"></div>
               </div>
-              <h3 class="font-heading font-semibold text-primary mb-2">GitHub</h3>
-              <p class="text-secondary">github.com/yourusername</p>
+              <h3 class="font-heading font-semibold text-lg text-primary mb-2">
+                GitHub
+              </h3>
+              <p class="text-secondary text-sm">github.com/yourusername</p>
             </div>
+          </div>
+
+          <!-- Bottom decorative animals -->
+          <div class="flex justify-center gap-8 mt-12">
+            <img
+              src="doggie.gif"
+              alt="Happy Dog"
+              class="jumping-dog w-12 h-12"
+              style="animation-delay: -0.5s"
+            />
+            <img
+              src="ramon-cut.gif"
+              alt="Eating Ramen"
+              class="eating-ramen w-16 h-16"
+            />
+            <img
+              src="doggie.gif"
+              alt="Happy Dog"
+              class="jumping-dog w-12 h-12"
+              style="animation-delay: -1.5s"
+            />
           </div>
         </div>
       </div>
@@ -1003,7 +1570,9 @@
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 class="font-heading font-semibold text-xl mb-4 relative inline-block">
+            <h3
+              class="font-heading font-semibold text-xl mb-4 relative inline-block"
+            >
               Anh Duc Hoang
               <span class="absolute -top-2 -right-6 text-lg">🌰</span>
             </h3>
@@ -1011,36 +1580,88 @@
               Building beautiful digital experiences with code and creativity.
             </p>
             <p class="text-gray-400 mt-4">
-              <a href="mailto:your.email@example.com" class="hover:text-white cursor-pointer transition-colors duration-200">your.email@example.com</a>
+              <a
+                href="mailto:your.email@example.com"
+                class="hover:text-white cursor-pointer transition-colors duration-200"
+                >your.email@example.com</a
+              >
             </p>
           </div>
 
           <div>
             <h3 class="font-heading font-semibold mb-4">Quick Links</h3>
             <ul class="space-y-2 text-gray-400">
-              <li><a href="#about" class="hover:text-white cursor-pointer transition-colors duration-200">About</a></li>
-              <li><a href="#projects" class="hover:text-white cursor-pointer transition-colors duration-200">Projects</a></li>
-              <li><a href="#skills" class="hover:text-white cursor-pointer transition-colors duration-200">Skills</a></li>
-              <li><a href="#experience" class="hover:text-white cursor-pointer transition-colors duration-200">Experience</a></li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-white cursor-pointer transition-colors duration-200"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="hover:text-white cursor-pointer transition-colors duration-200"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  class="hover:text-white cursor-pointer transition-colors duration-200"
+                  >Skills</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#experience"
+                  class="hover:text-white cursor-pointer transition-colors duration-200"
+                  >Experience</a
+                >
+              </li>
             </ul>
           </div>
 
           <div>
             <h3 class="font-heading font-semibold mb-4">Connect</h3>
             <div class="flex gap-4">
-              <a href="#" class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+              <a
+                href="https://github.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+                title="GitHub"
+              >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                  <path
+                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                  />
                 </svg>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+              <a
+                href="https://linkedin.com/in/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+                title="LinkedIn"
+              >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
                 </svg>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform">
+              <a
+                href="https://facebook.com/yourprofile"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 hover:text-white cursor-pointer transition-colors duration-200 hover:scale-110 transform"
+                title="Facebook"
+              >
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
                 </svg>
               </a>
             </div>
@@ -1048,7 +1669,10 @@
         </div>
 
         <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
-          <p>&copy; 2026 Anh Duc Hoang. All rights reserved. <span class="inline-block ml-2">🐿️</span></p>
+          <p>
+            &copy; 2026 Anh Duc Hoang. All rights reserved.
+            <span class="inline-block ml-2">🐿️</span>
+          </p>
         </div>
       </div>
     </footer>
@@ -1056,207 +1680,219 @@
     <!-- JavaScript for interactions -->
     <script>
       // Header scroll behavior
-      const navbar = document.getElementById('navbar');
-      const heroSection = document.getElementById('hero');
+      const navbar = document.getElementById('navbar')
+      const heroSection = document.getElementById('hero')
 
       function handleScroll() {
-        const heroHeight = heroSection.offsetHeight;
+        const heroHeight = heroSection.offsetHeight
         if (window.scrollY > heroHeight - 100) {
-          navbar.classList.add('scrolled');
+          navbar.classList.add('scrolled')
         } else {
-          navbar.classList.remove('scrolled');
+          navbar.classList.remove('scrolled')
         }
       }
 
-      window.addEventListener('scroll', handleScroll);
+      window.addEventListener('scroll', handleScroll)
 
       // Scroll reveal animation
       const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.scroll-reveal').forEach(el => {
-        observer.observe(el);
-      });
-
-      // Squirrel follows cursor (only in hero section)
-      const squirrel = document.getElementById('squirrel');
-      let mouseX = 0;
-      let mouseY = 0;
-      let squirrelX = 0;
-      let squirrelY = 0;
-
-      document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-
-        // Only show squirrel in hero area
-        const heroRect = heroSection.getBoundingClientRect();
-        if (mouseY < heroRect.bottom && mouseY > heroRect.top) {
-          squirrel.style.display = 'block';
-        } else {
-          squirrel.style.display = 'none';
-        }
-      });
-
-      function animateSquirrel() {
-        // Smooth follow with lag
-        squirrelX += (mouseX - squirrelX - 25) * 0.08;
-        squirrelY += (mouseY - squirrelY - 25) * 0.08;
-
-        squirrel.style.left = squirrelX + 'px';
-        squirrel.style.top = squirrelY + 'px';
-
-        // Flip based on direction
-        if (mouseX > squirrelX + 25) {
-          squirrel.style.transform = 'scaleX(1)';
-        } else {
-          squirrel.style.transform = 'scaleX(-1)';
-        }
-
-        requestAnimationFrame(animateSquirrel);
+        threshold: 0.1,
       }
 
-      animateSquirrel();
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed')
+          }
+        })
+      }, observerOptions)
+
+      document.querySelectorAll('.scroll-reveal').forEach((el) => {
+        observer.observe(el)
+      })
+
 
       // Acorn bounce animation
-      const style = document.createElement('style');
+      const style = document.createElement('style')
       style.textContent = `
         @keyframes acornBounce {
           0%, 100% { transform: translateY(0) rotate(0deg); }
           25% { transform: translateY(-8px) rotate(-5deg); }
           75% { transform: translateY(-4px) rotate(5deg); }
         }
-      `;
-      document.head.appendChild(style);
+      `
+      document.head.appendChild(style)
 
       // Sheet component functions
       const projectData = {
         ecommerce: {
           title: 'E-Commerce Platform',
           subtitle: 'Modern Online Shopping Experience',
-          description: 'A comprehensive e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment integration, and an intuitive admin dashboard.',
+          description:
+            'A comprehensive e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment integration, and an intuitive admin dashboard.',
           features: [
             'Real-time inventory tracking',
             'Secure payment gateway integration (Stripe, PayPal)',
             'Advanced product filtering and search',
             'Customer review and rating system',
             'Order tracking and notifications',
-            'Responsive mobile-first design'
+            'Responsive mobile-first design',
           ],
-          tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux', 'Stripe API'],
-          images: ['Product catalog view', 'Shopping cart experience', 'Admin dashboard'],
-          challenges: 'Implementing real-time inventory sync across multiple warehouses while maintaining performance.',
-          outcome: 'Increased conversion rate by 35% and reduced cart abandonment by 28%.',
-          link: '#'
+          tech: [
+            'React',
+            'Node.js',
+            'MongoDB',
+            'Express',
+            'Redux',
+            'Stripe API',
+          ],
+          images: [
+            'Product catalog view',
+            'Shopping cart experience',
+            'Admin dashboard',
+          ],
+          challenges:
+            'Implementing real-time inventory sync across multiple warehouses while maintaining performance.',
+          outcome:
+            'Increased conversion rate by 35% and reduced cart abandonment by 28%.',
+          link: '#',
         },
         taskmanager: {
           title: 'Task Management App',
           subtitle: 'Collaborative Workspace for Teams',
-          description: 'A powerful task management application with real-time collaboration, built using Vue.js and Firebase. Features drag-and-drop Kanban boards, team chat, and project analytics.',
+          description:
+            'A powerful task management application with real-time collaboration, built using Vue.js and Firebase. Features drag-and-drop Kanban boards, team chat, and project analytics.',
           features: [
             'Drag-and-drop Kanban boards',
             'Real-time team collaboration',
             'Task dependencies and subtasks',
             'Time tracking and reporting',
             'File attachments and comments',
-            'Custom workflow automation'
+            'Custom workflow automation',
           ],
-          tech: ['Vue.js', 'Firebase', 'Tailwind CSS', 'Vuex', 'Cloud Functions'],
+          tech: [
+            'Vue.js',
+            'Firebase',
+            'Tailwind CSS',
+            'Vuex',
+            'Cloud Functions',
+          ],
           images: ['Kanban board interface', 'Project dashboard', 'Team chat'],
-          challenges: 'Ensuring smooth real-time updates for large teams without performance degradation.',
-          outcome: 'Improved team productivity by 40% and reduced project delivery time by 25%.',
-          link: '#'
+          challenges:
+            'Ensuring smooth real-time updates for large teams without performance degradation.',
+          outcome:
+            'Improved team productivity by 40% and reduced project delivery time by 25%.',
+          link: '#',
         },
         analytics: {
           title: 'Analytics Dashboard',
           subtitle: 'Real-Time Data Visualization',
-          description: 'An advanced analytics dashboard built with Next.js and D3.js, providing real-time insights through interactive charts and customizable widgets.',
+          description:
+            'An advanced analytics dashboard built with Next.js and D3.js, providing real-time insights through interactive charts and customizable widgets.',
           features: [
             'Real-time data streaming',
             'Interactive charts and graphs',
             'Customizable dashboard widgets',
             'Export reports (PDF, CSV, Excel)',
             'Multi-user access control',
-            'API integration support'
+            'API integration support',
           ],
           tech: ['Next.js', 'D3.js', 'PostgreSQL', 'Redis', 'Chart.js'],
-          images: ['Main dashboard view', 'Custom reports', 'Data visualizations'],
-          challenges: 'Optimizing rendering performance for large datasets while maintaining interactivity.',
-          outcome: 'Reduced data analysis time by 60% and improved decision-making speed.',
-          link: '#'
+          images: [
+            'Main dashboard view',
+            'Custom reports',
+            'Data visualizations',
+          ],
+          challenges:
+            'Optimizing rendering performance for large datasets while maintaining interactivity.',
+          outcome:
+            'Reduced data analysis time by 60% and improved decision-making speed.',
+          link: '#',
         },
         social: {
           title: 'Social Media Platform',
           subtitle: 'Connect and Share with Your Community',
-          description: 'A modern social media platform with real-time feeds, media sharing, and community features. Built with React, GraphQL, and AWS infrastructure.',
+          description:
+            'A modern social media platform with real-time feeds, media sharing, and community features. Built with React, GraphQL, and AWS infrastructure.',
           features: [
             'Real-time activity feeds',
             'Photo and video sharing',
             'Direct messaging and group chats',
             'Story features (24-hour posts)',
             'Advanced privacy controls',
-            'Content moderation tools'
+            'Content moderation tools',
           ],
           tech: ['React', 'GraphQL', 'AWS', 'Apollo Client', 'S3', 'Lambda'],
           images: ['Feed interface', 'Profile page', 'Messaging'],
-          challenges: 'Scaling real-time features to handle millions of concurrent users.',
-          outcome: 'Reached 100K+ active users in first 3 months with 98% uptime.',
-          link: '#'
+          challenges:
+            'Scaling real-time features to handle millions of concurrent users.',
+          outcome:
+            'Reached 100K+ active users in first 3 months with 98% uptime.',
+          link: '#',
         },
         fitness: {
           title: 'Fitness Tracker',
           subtitle: 'Your Personal Workout Companion',
-          description: 'A comprehensive fitness tracking mobile app built with React Native. Track workouts, set goals, monitor progress, and connect with fitness communities.',
+          description:
+            'A comprehensive fitness tracking mobile app built with React Native. Track workouts, set goals, monitor progress, and connect with fitness communities.',
           features: [
             'Workout logging and tracking',
             'Custom exercise plans',
             'Progress charts and analytics',
             'Nutrition tracking',
             'Social challenges and leaderboards',
-            'Wearable device integration'
+            'Wearable device integration',
           ],
-          tech: ['React Native', 'Redux', 'SQLite', 'HealthKit', 'Google Fit API'],
+          tech: [
+            'React Native',
+            'Redux',
+            'SQLite',
+            'HealthKit',
+            'Google Fit API',
+          ],
           images: ['Workout tracker', 'Progress dashboard', 'Social features'],
-          challenges: 'Integrating with multiple wearable devices while maintaining battery efficiency.',
-          outcome: 'Average user engagement of 45 minutes per day with 85% retention rate.',
-          link: '#'
+          challenges:
+            'Integrating with multiple wearable devices while maintaining battery efficiency.',
+          outcome:
+            'Average user engagement of 45 minutes per day with 85% retention rate.',
+          link: '#',
         },
         recipe: {
           title: 'Recipe Finder',
           subtitle: 'Discover and Save Your Favorite Recipes',
-          description: 'A beautiful recipe discovery app built with Svelte, featuring ingredient-based search, meal planning, and a personalized recipe collection.',
+          description:
+            'A beautiful recipe discovery app built with Svelte, featuring ingredient-based search, meal planning, and a personalized recipe collection.',
           features: [
             'Ingredient-based recipe search',
             'Meal planning calendar',
             'Shopping list generator',
             'Recipe rating and reviews',
             'Dietary preference filters',
-            'Cooking timer and step-by-step mode'
+            'Cooking timer and step-by-step mode',
           ],
-          tech: ['Svelte', 'SvelteKit', 'Spoonacular API', 'IndexedDB', 'CSS Grid'],
+          tech: [
+            'Svelte',
+            'SvelteKit',
+            'Spoonacular API',
+            'IndexedDB',
+            'CSS Grid',
+          ],
           images: ['Recipe search', 'Recipe details', 'Meal planner'],
-          challenges: 'Creating an intuitive ingredient search algorithm with fuzzy matching.',
-          outcome: 'Users save an average of 8 hours per month on meal planning.',
-          link: '#'
-        }
-      };
+          challenges:
+            'Creating an intuitive ingredient search algorithm with fuzzy matching.',
+          outcome:
+            'Users save an average of 8 hours per month on meal planning.',
+          link: '#',
+        },
+      }
 
       function openSheet(projectId) {
-        const project = projectData[projectId];
-        if (!project) return;
+        const project = projectData[projectId]
+        if (!project) return
 
-        const sheetContent = document.getElementById('sheetContent');
+        const sheetContent = document.getElementById('sheetContent')
         sheetContent.innerHTML = `
           <div class="space-y-6">
             <!-- Header with gradient -->
@@ -1275,14 +1911,18 @@
             <div>
               <h3 class="font-heading text-xl font-semibold text-primary mb-4">Key Features</h3>
               <div class="grid gap-3">
-                ${project.features.map((feature, index) => `
+                ${project.features
+                  .map(
+                    (feature, index) => `
                   <div class="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200" style="animation: bounceScale 0.5s ease ${index * 0.1}s">
                     <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                     </svg>
                     <span class="text-secondary">${feature}</span>
                   </div>
-                `).join('')}
+                `,
+                  )
+                  .join('')}
               </div>
             </div>
 
@@ -1290,11 +1930,15 @@
             <div>
               <h3 class="font-heading text-xl font-semibold text-primary mb-4">Technologies Used</h3>
               <div class="flex flex-wrap gap-2">
-                ${project.tech.map((tech, index) => `
+                ${project.tech
+                  .map(
+                    (tech, index) => `
                   <span class="px-4 py-2 bg-accent/10 text-accent rounded-lg font-medium hover:bg-accent hover:text-white transition-all duration-200 cursor-pointer" style="animation: bounceScale 0.5s ease ${index * 0.05}s">
                     ${tech}
                   </span>
-                `).join('')}
+                `,
+                  )
+                  .join('')}
               </div>
             </div>
 
@@ -1330,45 +1974,45 @@
               </a>
             </div>
           </div>
-        `;
+        `
 
         // Show sheet
-        document.getElementById('sheetOverlay').classList.add('active');
-        document.getElementById('projectSheet').classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.getElementById('sheetOverlay').classList.add('active')
+        document.getElementById('projectSheet').classList.add('active')
+        document.body.style.overflow = 'hidden'
       }
 
       function closeSheet() {
-        document.getElementById('sheetOverlay').classList.remove('active');
-        document.getElementById('projectSheet').classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.getElementById('sheetOverlay').classList.remove('active')
+        document.getElementById('projectSheet').classList.remove('active')
+        document.body.style.overflow = 'auto'
       }
 
       // Magnetic button effect
       document.addEventListener('DOMContentLoaded', () => {
-        const magneticButtons = document.querySelectorAll('.magnetic-btn');
+        const magneticButtons = document.querySelectorAll('.magnetic-btn')
 
-        magneticButtons.forEach(button => {
+        magneticButtons.forEach((button) => {
           button.addEventListener('mousemove', (e) => {
-            const rect = button.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+            const rect = button.getBoundingClientRect()
+            const x = e.clientX - rect.left - rect.width / 2
+            const y = e.clientY - rect.top - rect.height / 2
 
-            button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
-          });
+            button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`
+          })
 
           button.addEventListener('mouseleave', () => {
-            button.style.transform = 'translate(0, 0)';
-          });
-        });
-      });
+            button.style.transform = 'translate(0, 0)'
+          })
+        })
+      })
 
       // Close sheet with Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-          closeSheet();
+          closeSheet()
         }
-      });
+      })
     </script>
   </body>
 </html>
