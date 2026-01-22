@@ -3,7 +3,10 @@
     "allow": [
       "Skill(ui-ux-pro-max)",
       "Skill(ui-ux-pro-max:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Skill(pdf)",
+      "Skill(pdf:*)",
+      "Bash(pip install:*)"
     ]
   }
 }
