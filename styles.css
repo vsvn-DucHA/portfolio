@@ -90,9 +90,10 @@ html {
 
 /* Header transition - Always fixed at top */
 nav {
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Scroll reveal animations */
@@ -128,7 +129,9 @@ nav {
   justify-content: center;
   opacity: 0;
   transform: scale(0.8);
-  transition: opacity 0.1s ease, transform 0.1s ease;
+  transition:
+    opacity 0.1s ease,
+    transform 0.1s ease;
   pointer-events: none;
 }
 
@@ -153,7 +156,9 @@ nav {
   font-weight: 600;
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
   pointer-events: none;
   z-index: 10;
 }
@@ -361,17 +366,6 @@ nav {
   animation: gradientShift 3s ease infinite;
 }
 
-/* Gentle bounce effect */
-@keyframes gentleBounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
 /* Flying cat animation */
 .flying-cat {
   position: fixed;
@@ -390,42 +384,6 @@ nav {
   100% {
     left: 110%;
     top: 20%;
-  }
-}
-
-/* Jumping dog animation */
-.jumping-dog {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  animation: jumpDog 2s ease-in-out infinite;
-}
-
-@keyframes jumpDog {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-/* Eating ramen animation */
-.eating-ramen {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  animation: eatRamen 1.5s ease-in-out infinite;
-}
-
-@keyframes eatRamen {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
   }
 }
 
@@ -448,58 +406,6 @@ nav {
   border-radius: inherit;
   border: 2px solid currentColor;
   animation: pulseRing 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-/* Text reveal animation */
-@keyframes textReveal {
-  from {
-    clip-path: inset(0 100% 0 0);
-  }
-  to {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-.text-reveal {
-  animation: textReveal 1s ease-out forwards;
-}
-
-/* Bounce scale animation */
-@keyframes bounceScale {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.95);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  75% {
-    transform: scale(0.98);
-  }
-}
-
-/* Shimmer effect */
-@keyframes shimmer {
-  0% {
-    background-position: -1000px 0;
-  }
-  100% {
-    background-position: 1000px 0;
-  }
-}
-
-.shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.3) 50%,
-    transparent 100%
-  );
-  background-size: 1000px 100%;
-  animation: shimmer 2s infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
