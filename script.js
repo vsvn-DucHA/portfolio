@@ -248,16 +248,6 @@ function openSheet(projectId) {
         </h4>
         <p class="text-green-800">${project.outcome}</p>
       </div>
-
-      <!-- CTA Button -->
-      <div class="pt-6 border-t border-gray-200">
-        <a href="${project.link}" class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-200 cursor-pointer magnetic-btn">
-          <span>View Live Project</span>
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-          </svg>
-        </a>
-      </div>
     </div>
   `
 
@@ -267,30 +257,15 @@ function openSheet(projectId) {
   document.body.style.overflow = 'hidden'
 }
 
-function closeSheet() {
+function closeSheet(event) {
+  if (event) {
+    event.stopPropagation()
+    event.preventDefault()
+  }
   document.getElementById('sheetOverlay').classList.remove('active')
   document.getElementById('projectSheet').classList.remove('active')
   document.body.style.overflow = 'auto'
 }
-
-// Magnetic button effect
-document.addEventListener('DOMContentLoaded', () => {
-  const magneticButtons = document.querySelectorAll('.magnetic-btn')
-
-  magneticButtons.forEach((button) => {
-    button.addEventListener('mousemove', (e) => {
-      const rect = button.getBoundingClientRect()
-      const x = e.clientX - rect.left - rect.width / 2
-      const y = e.clientY - rect.top - rect.height / 2
-
-      button.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`
-    })
-
-    button.addEventListener('mouseleave', () => {
-      button.style.transform = 'translate(0, 0)'
-    })
-  })
-})
 
 // Close sheet with Escape key
 document.addEventListener('keydown', (e) => {

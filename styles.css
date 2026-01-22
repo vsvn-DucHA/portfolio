@@ -88,30 +88,77 @@ html {
   }
 }
 
-/* Header transition */
+/* Header transition - Always fixed at top */
 nav {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-nav.scrolled {
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  border-radius: 0 !important;
-  border-left: none !important;
-  border-right: none !important;
-  border-top: none !important;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Scroll reveal animations */
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Project card click indicator */
+.project-card {
+  position: relative;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.1s ease, transform 0.1s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.project-card .click-indicator {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(37, 99, 235, 0.9);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.project-card:hover .click-indicator {
   opacity: 1;
   transform: translateY(0);
 }
@@ -224,7 +271,9 @@ nav.scrolled {
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   border: 1px solid #e4e4e7;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .timeline-item:hover .timeline-content {
@@ -296,12 +345,6 @@ nav.scrolled {
   transform: translateX(0);
 }
 
-/* Magnetic button effect */
-.magnetic-btn {
-  position: relative;
-  transition: transform 0.2s ease;
-}
-
 /* Gradient animation */
 @keyframes gradientShift {
   0%,
@@ -327,10 +370,6 @@ nav.scrolled {
   50% {
     transform: translateY(-5px);
   }
-}
-
-.project-card:hover {
-  animation: gentleBounce 0.4s ease;
 }
 
 /* Flying cat animation */
