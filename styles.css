@@ -408,6 +408,37 @@ nav {
   animation: pulseRing 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Text reveal animation - Used in sheet content */
+@keyframes textReveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.text-reveal {
+  animation: textReveal 1s ease-out forwards;
+}
+
+/* Bounce scale animation - Used in sheet content */
+@keyframes bounceScale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(0.98);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

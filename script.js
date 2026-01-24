@@ -151,24 +151,108 @@ const projectData = {
     link: '#',
   },
   vinfast: {
-    title: 'Vinfast VA (Virtual Assistant)',
-    subtitle: 'Cloud-based Virtual Assistant for Vehicles',
+    title: 'SmartSheet Connector',
+    subtitle: 'Jira-SmartSheet Bi-directional Integration',
     description:
-      'Built cloud infrastructure supporting virtual assistant operations for Vinfast vehicles. Includes chatbot logic design and microservices architecture.',
+      'Bi-directional synchronization system between Jira and SmartSheet, enabling real-time data sync of issues, status, and progress. The solution allows users to leverage SmartSheet for statistics, data visualization, charting, and project tracking based on live Jira data.',
     features: [
-      'Chatbot conversation logic and flow design',
-      'System monitoring and log analysis on Grafana',
-      'Cloud-native microservices integration',
-      'RESTful API development for virtual assistant',
-      'User interaction interface design',
-      'Docker and Kubernetes deployment',
+      'Bi-directional sync between Jira and SmartSheet',
+      'Flexible field mapping configuration',
+      'Incremental data synchronization',
+      'Conflict resolution for concurrent changes',
+      'Real-time progress tracking and visualization',
+      'Dashboard and chart generation in SmartSheet',
     ],
-    tech: ['Python (FastAPI)', 'Docker', 'Kubernetes', 'Grafana', 'Microservices'],
-    images: ['Chatbot interface', 'Grafana monitoring', 'Cloud architecture'],
+    tech: ['Java', 'Spring Boot', 'React', 'Ant Design', 'Zustand', 'PostgreSQL', 'Jira Graph API', 'SmartSheet Graph API'],
+    images: ['Sync dashboard', 'Field mapping', 'SmartSheet visualization'],
     challenges:
-      'Building scalable cloud infrastructure for real-time voice assistant interactions in vehicles.',
+      'Implementing flexible field mapping between Jira and SmartSheet, handling data conflicts from both sides, and ensuring stable incremental sync with large datasets.',
     outcome:
-      'Successfully deployed cloud platform supporting Vinfast virtual assistant operations.',
+      'Enabled teams and non-technical stakeholders to track Jira project progress through visual dashboards on SmartSheet. Eliminated manual export/import operations and reduced data discrepancies. Supports stable sync with large datasets and easily extensible for future sync rules.',
+    link: '#',
+  },
+  vinfastfe: {
+    title: 'Vinfast VA Frontend',
+    subtitle: 'Cloud-based Virtual Assistant Platform',
+    description:
+      'Virtual assistant platform utilizing cloud services for ASR, text-to-speech, and entity detection. Enables vehicle control of compatible devices and virtual assistant version updates.',
+    features: [
+      'UI/UX bug fixes and improvements',
+      'Cloud-based ASR and text-to-speech integration',
+      'Entity detection for voice commands',
+      'Vehicle device control interface',
+      'Virtual assistant version management',
+      'Microservice architecture integration',
+    ],
+    tech: ['Python (FastAPI)', 'Vue.js', 'Nuxt.js', 'Vuex', 'Vuetify', 'Kong Gateway', 'Kafka', 'Microservices'],
+    images: ['Voice assistant UI', 'Device control', 'Cloud integration'],
+    challenges:
+      'Integrating multiple cloud services for real-time voice processing while maintaining responsive UI and handling microservice communication.',
+    outcome:
+      'Delivered responsive virtual assistant interface with seamless cloud service integration and device control capabilities.',
+    link: '#',
+  },
+  bidv: {
+    title: 'BIDV Sentiment Analysis',
+    subtitle: 'Customer Sentiment Analytics Platform',
+    description:
+      'Full-stack sentiment analysis system processing customer data provided by BIDV. Features comprehensive CRUD operations and analytical dashboards for understanding customer emotions and feedback.',
+    features: [
+      'User interface design and implementation',
+      'File upload API development',
+      'Authentication and authorization system',
+      'Data processing and transformation',
+      'Interactive analytics dashboard',
+      'Real-time sentiment visualization',
+    ],
+    tech: ['Python (FastAPI)', 'Vue.js', 'Vuex', 'Dagster', 'BI Tools', 'Microservices'],
+    images: ['Sentiment dashboard', 'Data upload', 'Analytics charts'],
+    challenges:
+      'Processing large volumes of customer data efficiently and creating intuitive visualizations for sentiment trends and patterns.',
+    outcome:
+      'Enabled BIDV to gain actionable insights from customer sentiment data through interactive dashboards and automated analysis.',
+    link: '#',
+  },
+  acb: {
+    title: 'ACB SDK',
+    subtitle: 'Mobile Chat SDK Integration',
+    description:
+      'React Native SDK for chat functionality in ACB mobile application. Designed components based on Vinbase API responses with cross-platform WebSocket connectivity.',
+    features: [
+      'Cross-platform mobile chat interface',
+      'WebSocket real-time communication',
+      'Custom component design from API responses',
+      'Rich messaging with Gifted Chat',
+      'Responsive UI components',
+      'Multi-platform compatibility',
+    ],
+    tech: ['React Native', 'Gifted Chat', 'React Native Elements', 'Font Awesome', 'WebSocket'],
+    images: ['Chat interface', 'Message components', 'Mobile integration'],
+    challenges:
+      'Ensuring consistent WebSocket connectivity across different mobile platforms and designing flexible components adapting to various API response formats.',
+    outcome:
+      'Delivered robust chat SDK enabling seamless communication features within ACB mobile app across iOS and Android platforms.',
+    link: '#',
+  },
+  vitadary: {
+    title: 'Vitadary WebView',
+    subtitle: 'Embedded Product Showcase Platform',
+    description:
+      'Full-stack webview solution embedded in Vitadary website. Integrated Salesforce synchronization running three times daily, featuring WebSocket connectivity and static product pages.',
+    features: [
+      'WebSocket real-time connectivity',
+      'Salesforce API integration',
+      'Scheduled data synchronization (3x daily)',
+      'Static product showcase pages',
+      'Responsive webview design',
+      'Automated data sync with Apache scheduler',
+    ],
+    tech: ['Python (FastAPI)', 'Vue.js', 'Vuetify', 'Vue Formulate', 'Vuex', 'Apache Scheduler', 'Celery'],
+    images: ['Product showcase', 'Salesforce sync', 'WebView integration'],
+    challenges:
+      'Maintaining reliable Salesforce integration with scheduled synchronization and ensuring WebSocket stability within webview constraints.',
+    outcome:
+      'Successfully deployed webview solution with automated Salesforce sync, providing Vitadary with real-time product information and enhanced customer engagement.',
     link: '#',
   },
 }
