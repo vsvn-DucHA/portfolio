@@ -29,7 +29,11 @@ try:
                 for j, table in enumerate(tables, 1):
                     all_text.append(f"## Table {j} on Page {i}\n\n")
                     for row in table:
-                        all_text.append("| " + " | ".join([str(cell) if cell else "" for cell in row]) + " |\n")
+                        all_text.append(
+                            "| "
+                            + " | ".join([str(cell) if cell else "" for cell in row])
+                            + " |\n"
+                        )
                     all_text.append("\n")
 
     # Combine all text
@@ -46,3 +50,12 @@ try:
 except Exception as e:
     print(f"Error processing PDF: {e}")
     exit(1)
+
+def whatIWant():
+    pass
+def whatIGet():
+    pass
+
+# from sqlalchemy.orm import AttributeEvents
+
+AttributeEvents
